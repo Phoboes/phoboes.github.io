@@ -12,13 +12,14 @@ img {
   margin: auto;
   /*transition: height 2s;*/
   transition: transform 2s;
+  border-radius: 50%;
 
 }
 
 img:hover {
   border: 10px dashed orange;
   /*width: 300px;*/
-  transform: rotate(3600deg);
+  transform: rotate(3600deg) scaleX(10);
 }
 
 

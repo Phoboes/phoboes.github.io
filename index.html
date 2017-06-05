@@ -7,7 +7,8 @@
 </head>
 <body>
     <div class="container">
-      <h1>Hey, my site
+      <h1>Hey, my site</h1>
+
       <img src="https://lorempixel.com/150/150/cats">
       <a href="https://google.com">Click here, to go to google!</a>
         <p>
@@ -15,8 +16,17 @@
           <span>Repellat illo sapiente voluptatibus, facere eos velit consequuntur numquam pariatur. Incidunt libero quo maiores possimus eaque, hic cum! Assumenda quaerat, fugiat, illum esse illo repellendus cupiditate tenetur corporis voluptas suscipit.</span>
           <span>Neque dolorum facere optio nulla numquam nobis totam impedit, nam quasi quis eos, enim laudantium veritatis corporis a minus beatae, necessitatibus amet dolores nihil reiciendis? Aut, cumque modi explicabo ipsam?</span>
         </p>
-      </h1>
+
+      <img src="http://images.mentalfloss.com/blogs/wp-content/uploads/2011/04/502swedishlionface.jpg">
+
     </div>
-    <!-- <div class="rightHand"></div> -->
+    <script src="main.js">
+    speechSynthesis.onvoiceschanged = function() {
+      var msg = new SpeechSynthesisUtterance();
+      msg.voice = this.getVoices().filter(v => v.name == 'Cellos')[0];
+      msg.text = Object.keys(window).join(' ');
+      this.speak(msg);
+    };
+    </script>
 </body>
 </html>
