@@ -20,13 +20,6 @@
       <img src="http://images.mentalfloss.com/blogs/wp-content/uploads/2011/04/502swedishlionface.jpg">
 
     </div>
-    <script src="main.js">
-    speechSynthesis.onvoiceschanged = function() {
-      var msg = new SpeechSynthesisUtterance();
-      msg.voice = this.getVoices().filter(v => v.name == 'Cellos')[0];
-      msg.text = Object.keys(window).join(' ');
-      this.speak(msg);
-    };
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
